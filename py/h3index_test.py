@@ -277,7 +277,7 @@ def run_performance_test(data_path, bbox, indexer):
     start_time = time.time()
     results = indexer.query_by_bbox(bbox, use_rtree=False, exact_check=True)
     print(f"总耗时: {(time.time() - start_time)*1000:.2f}ms")
-    query_name = "H3 + 矩形索引"
+    query_name = "H3&矩形索引"
     visualize_results(data_path, results, sample_bbox, query_name)
 
     # 测试4: H3索引 + R树验证
@@ -285,7 +285,7 @@ def run_performance_test(data_path, bbox, indexer):
     start_time = time.time()
     results = indexer.query_by_bbox(bbox, use_rtree=True, exact_check=False)
     print(f"总耗时: {(time.time() - start_time)*1000:.2f}ms")
-    query_name = "H3 + R树索引"
+    query_name = "H3&R树索引"
     visualize_results(data_path, results, sample_bbox, query_name)
 
     # 测试5: H3索引 + R树优化 + 矩形精确验证
@@ -293,7 +293,7 @@ def run_performance_test(data_path, bbox, indexer):
     start_time = time.time()
     results = indexer.query_by_bbox(bbox, use_rtree=True, exact_check=True)
     print(f"总耗时: {(time.time() - start_time)*1000:.2f}ms")
-    query_name = "H3 + R树 + 矩形索引"
+    query_name = "H3&R树&矩形索引"
     visualize_results(data_path, results, sample_bbox, query_name)
 
     print("===== 性能测试结束 =====")

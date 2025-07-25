@@ -1,5 +1,7 @@
 # 空间索引大比拼：H3、GeoHash 和 S2 哪个更适合你的GIS应用？
 
+![Local Image](./images/S2Intro.webp)
+
 在地理信息系统（GIS）应用中，快速检索空间数据是核心需求之一。传统的顺序扫描方式虽然简单直接，但随着数据量增长，性能问题日益凸显，为此寻求高效的空间索引方式很有必要。地理空间索引：Geohash，Google S2与Uber H3[https://zhuanlan.zhihu.com/p/27262305853]这篇文中做了GeoHash和S2，以及H3的概要介绍，本文重点是通过代码实践来探索三种主流的空间索引技术，对比3种索引方式，并给出测试结果。
 
 ## 为什么要使用空间索引？
@@ -41,6 +43,10 @@ H3 是 Uber 开发的一种分层六边形网格系统。它将地球表面划�
 | 方案3    | 主索引 + 矩形边界精确验证            |
 | 方案4    | 主索引 + R 树优化                    |
 | 方案5    | 主索引 + R 树优化 + 矩形边界精确验证 |
+
+
+使用GDAL的空间过滤效果如下：
+![Local Image](./images/纯GDAL顺序扫描索引.png)
 
 
 ### GeoHash 索引构建核心代码
@@ -95,6 +101,9 @@ def build_index(self):
 ===== 性能测试结束 =====
 ```
 
+纯geohash索引以及geohash+R树的混合索引的查询效果如下：
+![Local Image](./images/纯geohash索引.png)
+![Local Image](./images/geohash&R树索引.png)
 ---
 
 ### S2 索引构建核心代码
@@ -156,6 +165,9 @@ def build_index(self):
 ===== 性能测试结束 =====
 ```
 
+纯S2索引以及S2+R树的混合索引的效果如下：
+![Local Image](./images/纯S2索引.png)
+![Local Image](./images/S2&R树索引.png)
 ---
 
 ### H3 索引构建核心代码
@@ -210,6 +222,9 @@ def build_index(self):
 ===== 性能测试结束 =====
 ```
 
+![Local Image](./images/纯H3索引.png)
+![Local Image](./images/H3&R树索引.png)
+---
 
 ## 测试结果分析
 
