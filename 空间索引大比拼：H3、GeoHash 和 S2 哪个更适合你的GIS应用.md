@@ -1,6 +1,6 @@
 # 空间索引大比拼：H3、GeoHash 和 S2 哪个更适合你的GIS应用？
 
-在地理信息系统（GIS）应用中，快速检索空间数据是核心需求之一。传统的顺序扫描方式虽然简单直接，但随着数据量增长，性能问题日益凸显，为此需求高效的空间索引方式很有必要。地理空间索引：Geohash，Google S2与Uber H3[https://zhuanlan.zhihu.com/p/27262305853]这篇文中做了GeoHash和S2，以及H3的概要介绍，本文重点是通过代码实践来探索三种主流的空间索引技术，对比3种索引方式，并给出测试结果。
+在地理信息系统（GIS）应用中，快速检索空间数据是核心需求之一。传统的顺序扫描方式虽然简单直接，但随着数据量增长，性能问题日益凸显，为此寻求高效的空间索引方式很有必要。地理空间索引：Geohash，Google S2与Uber H3[https://zhuanlan.zhihu.com/p/27262305853]这篇文中做了GeoHash和S2，以及H3的概要介绍，本文重点是通过代码实践来探索三种主流的空间索引技术，对比3种索引方式，并给出测试结果。
 
 ## 为什么要使用空间索引？
 
@@ -252,7 +252,7 @@ def build_index(self):
 **相关代码仓库**：[https://github.com/vlv-squid/SpatialIndex](https://github.com/vlv-squid/SpatialIndex)
 
 **参考文献**：
-1. Uber H3: https://h3geo.org/
-2. Google S2: https://s2geometry.io/
-3. Geohash： https://benfeifke.com/posts/geospatial-indexing-explained/
-4. 地理空间索引：Geohash，Google S2与Uber H3： https://zhuanlan.zhihu.com/p/27262305853
+1. Uber H3: [https://h3geo.org/](https://h3geo.org/)
+2. Google S2: [https://s2geometry.io/](https://s2geometry.io/)
+3. Geohash： [https://benfeifke.com/posts/geospatial-indexing-explained/](https://benfeifke.com/posts/geospatial-indexing-explained/)
+4. 地理空间索引：Geohash，Google S2与Uber H3： [https://zhuanlan.zhihu.com/p/27262305853](https://zhuanlan.zhihu.com/p/27262305853)
