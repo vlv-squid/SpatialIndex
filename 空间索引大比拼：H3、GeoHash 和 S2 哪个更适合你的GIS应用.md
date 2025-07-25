@@ -222,6 +222,7 @@ def build_index(self):
 ===== 性能测试结束 =====
 ```
 
+纯H3索引以及H3+R树索引的查询效果如下：
 ![Local Image](./images/纯H3索引.png)
 ![Local Image](./images/H3&R树索引.png)
 ---
