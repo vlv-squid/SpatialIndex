@@ -24,10 +24,10 @@
   - S2 + R树 + 精确检查
 
 ### 4. **性能测试模块**
-- 提供 [run_performance_test](file:///home/chenming/Projects/s2-test/py/s2index_test.py#L231-L280) 函数，对比不同查询方式的性能差异。
+- 提供 [run_performance_test]函数，对比不同查询方式的性能差异。
 
 ### 5. **可视化支持**
-- 提供 [visualize_results](file:///home/chenming/Projects/s2-test/py/s2index_test.py#L283-L351) 函数，使用 `matplotlib` 可视化查询结果。
+- 提供 [visualize_results]函数，使用 `matplotlib` 可视化查询结果。
 
 ---
 
@@ -130,16 +130,6 @@ results = indexer.query_by_bbox((103.2504, 26.4297, 103.3028, 26.4747), use_rtre
 ===== 性能测试结束 =====
 ```
 
----
-
-## 📁 文件结构
-
-- `S2SpatialIndex.py`: 核心类，封装 S2 + R树索引逻辑。
-- [run_performance_test](file:///home/chenming/Projects/s2-test/py/s2index_test.py#L231-L280): 性能测试函数。
-- [visualize_results](file:///home/chenming/Projects/s2-test/py/s2index_test.py#L283-L351): 查询结果可视化函数。
-- `__main__`: 示例执行入口。
-
----
 
 ## 📈 性能优势
 

@@ -249,7 +249,7 @@ def build_index(self):
 
 *本文基于实际代码测试，所有测试代码已在 GitHub 开源。欢迎在评论区分享你的使用经验和优化建议！*
 
-**相关代码仓库**：[https://github.com/your-repo/s2-test](https://github.com/your-repo/s2-test)
+**相关代码仓库**：[https://github.com/vlv-squid/SpatialIndex](https://github.com/vlv-squid/SpatialIndex)
 
 **参考文献**：
 1. Uber H3: https://h3geo.org/
